@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="all.css">
+   
+
+</head>
+<body><div><div id="div1">
+    <form id="form1"   ><h1>Reach Us</h1>
+    <main>E mail: anyinfo@gmail.com<br><br>
+    Phone No. 289-623-4114<br><br>
+    Address: 22 Queenpost Dr Brampton, ON, Canada</main>
+    </form>
+</div>
+     
+    <div id="div2"><form id="form2"><h1 class="h1">Contact Us</h1><input type="text" id="contact" placeholder="First Name" onchange="contactus()" required><br><br>
+    <input type="text" id="Lastname" placeholder="Last Name" onchange="lastname()" required><br><br>
+    
+    <input type="email"  id="email" placeholder="E mail" onchange="email()"  required><br><br>
+    <input type="tel" id="Phone" required placeholder="Phone" onchange="Phone()" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br><br>
+    <input type="date" id="date" ><br><br>
+    <textarea rows="10" cols="40" name="message" id="message" onchange="Message()" placeholder="Write a Message here" required></textarea><br><br>
+    <main style="text-align: center;"><button type="submit" id="btn" onclick="contact()"   data-button-name="Submit"><b>Submit</b></button></main>
+
+    <script>
+        function contactus(){
+            let C=document.getElementById("contact").value;
+            if (C.length!=5 || isNan(parseInt)){
+                alert("First Name must contain 5 characteristic");
+                return false;
+            }
+            return true;}
+       function lastname(){
+        let L=document.getElementById("Lastname").value;
+            if (L.length!=5 || isNan(parseInt)){
+                alert("Last Name must contain 5 characteristic");
+                return false;
+            }
+            return true;}
+          function Phone(){
+        let P=document.getElementById("Phone").value;
+            if (P.length!=10 || isNan(parseInt)){
+                alert("Phone must contain 10 digits");
+                return false;
+            }
+            return true;}
+           function Message(){ 
+        let M=document.getElementById("message").value;
+            if (M.length!=50 || isNan(parseInt)){
+                alert("Message must be of 50 alphabets");
+                return false;
+            }
+            return true;}
+           
+        
+    </script></form></div>
+    
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+.header .nav ul#mycolor li a {
+  color: yellow;
+}
+.header .nav ul#mycolor li a:hover {
+  color: white;
+}
+
+#form2, #form1 {
+  border: 2px dashed black;
+  padding: 20px;
+}
+
+#form1 {
+  padding: 178px;
+}
+
+#btn {
+  background-color: red;
+}
+
+#btn::after {
+  content: attr(data-button-name);
+  text-transform: uppercase;
+  display: block;
+}
+
+button::after {
+  content: attr(data-button-name);
+  text-transform: uppercase;
+  margin-left: 5px;
+}/*# sourceMappingURL=all.css.map */

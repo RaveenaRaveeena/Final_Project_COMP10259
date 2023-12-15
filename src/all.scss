@@ -1,0 +1,39 @@
+$menucolor:yellow;
+$hovercolor:white;
+$btncolor:red;
+$border:2px dashed black;
+
+.header{
+  .nav{
+    ul#mycolor{
+      li{
+        a{
+          color:$menucolor;
+          &:hover{
+            color:$hovercolor;
+          }
+        }
+      }
+    }
+  }
+}
+#form2,#form1 {
+  border: $border;
+  padding: 20px; 
+}
+#form1{
+  padding:178px;
+}
+#btn{
+  background-color: $btncolor;
+}
+#btn::after {
+  content: attr(data-button-name); 
+  text-transform: uppercase; 
+  display: block; 
+}
+button::after {
+  content: attr(data-button-name); 
+  text-transform: uppercase; 
+  margin-left: 5px; 
+}
